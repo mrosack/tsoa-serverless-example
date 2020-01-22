@@ -19,7 +19,7 @@ service: tsoa-serverless-example
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs10.x
   region: us-west-1
 
 plugins:
