@@ -1,12 +1,13 @@
-import {Route, Get, Post, Delete, Patch, Example, Body} from 'tsoa';
+import {Route, Get, Post, Delete, Patch, Example, Body, Controller} from 'tsoa';
 import {inject, provideSingleton} from '../ioc';
 import {User, UserCreateRequest, UserUpdateRequest} from '../models/user';
 import {UsersService} from '../services/usersService';
 
 @Route('Users')
 @provideSingleton(UsersController)
-export class UsersController {
+export class UsersController extends Controller {
     constructor(@inject(UsersService) private usersService: UsersService) {
+      super();
     }
 
     /** Get the current user */
