@@ -7,7 +7,7 @@ Lambda with no cold starts and lots of strongly typed goodness!
 
 ## Run Locally
 
-Make sure you have Serverless installed globally (`npm install -g serverless`) and install the dependencies ([yarn](https://yarnpkg.com) is preferred), then you can:
+Make sure you have Serverless installed globally (`npm install -g serverless`) and install the dependencies (`npm install`), then you can:
 
 `npm run start` - This runs the TSOA pipeline, then builds the typescript using [Serverless Webpack](https://github.com/elastic-coders/serverless-webpack) and serves it using [Serverless Offline](https://github.com/dherault/serverless-offline)!
 
@@ -20,4 +20,4 @@ swagger - `npm run fix-swagger` will tweak the swagger.json appropriately, but o
 
 ## Swagger UI
 
-I don't have Swagger UI set up in the project, mostly because I really don't want to handle serving real HTML/JS assets (at least for now).  If you want to play around with your API once you've got it up and running locally, just go to <http://petstore.swagger.io?url=http://localhost:3000/v1/swagger.json>.
+I don't have Swagger UI set up in the project, mostly because I really don't want to handle serving real HTML/JS assets (at least for now).  If you want to play around with your API once you've got it up and running locally, just go to <http://petstore.swagger.io?url=http://localhost:3000/swagger.json>.

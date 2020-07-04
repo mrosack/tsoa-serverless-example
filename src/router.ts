@@ -17,7 +17,7 @@ winston.configure({
 
 const router = Router();
 
-router.get('/v1/swagger.json', (req, res) => {
+router.get('/swagger.json', (req, res) => {
   res.status(200).json(require('../_gen/swagger/swagger.json'));
 });
 

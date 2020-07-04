@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run routes-gen && npm run lint && npm run swagger-gen ",
     "lint": "tslint ./src/**/*.ts",
     "clean": "rimraf _gen",
-    "swagger-gen": "tsoa swagger",
+    "swagger-gen": "tsoa spec",
     "fix-swagger": "bash -c './scripts.sh fix-swagger'",
     "routes-gen": "bash -c 'mkdir -p _gen/routes' && tsoa routes",
     "tsoa": "tsoa"
