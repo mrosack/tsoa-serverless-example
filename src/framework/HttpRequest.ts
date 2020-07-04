@@ -25,4 +25,8 @@ export class HttpRequest {
     this.query = event.queryStringParameters;
     this.url = event.path;
   }
+
+  public header(name: string): string {
+    return this.headers[name];
+  }
 }
