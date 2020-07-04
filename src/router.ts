@@ -3,10 +3,6 @@ import { RegisterRoutes } from '../_gen/routes/routes';
 import { ErrorResponse, HttpRequest, HttpResponse, HttpResponseError, LambdaProxyEvent, LambdaProxyCallback } from './framework';
 import * as winston from 'winston';
 
-// reference for dynamic generation
-import './controllers/companies.controller';
-import './controllers/users.controller';
-
 winston.configure({
   exitOnError: false,
   handleExceptions: true,
