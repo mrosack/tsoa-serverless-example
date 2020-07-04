@@ -4,8 +4,8 @@ import { ErrorResponse, HttpRequest, HttpResponse, HttpResponseError, LambdaProx
 import * as winston from 'winston';
 
 // reference for dynamic generation
-import './controllers/companiesController';
-import './controllers/usersController';
+import './controllers/companies.controller';
+import './controllers/users.controller';
 
 winston.configure({
   exitOnError: false,
@@ -61,7 +61,7 @@ const mockApp = {
   put: methodHandler('put')
 };
 
-RegisterRoutes(mockApp);
+RegisterRoutes(mockApp as any);
 
 export function handler(event: LambdaProxyEvent, context, callback: LambdaProxyCallback) {
   winston.info(`handling ${event.httpMethod} ${event.path}`);

@@ -1,13 +1,14 @@
 import {Company} from '../models/company';
 import {CompaniesService} from '../services/companiesService';
 import {inject, provideSingleton} from '../ioc';
-import {Route, Get} from 'tsoa';
+import {Route, Get, Controller} from 'tsoa';
 import {User} from '../models/user';
 
 @Route('Companies')
 @provideSingleton(CompaniesController)
-export class CompaniesController {
+export class CompaniesController extends Controller {
     constructor(@inject(CompaniesService) private companiesService: CompaniesService) {
+      super();
     }
 
     /** Get the current account */
