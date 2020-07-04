@@ -1,14 +1,14 @@
 {
-    "swagger": {
-        "outputDirectory": "./_gen/swagger",
-        "entryFile": "./src/router.ts",
-        "host": "localhost:3000",
-        "basePath": "/v1"
-    },
-    "routes": {
-        "basePath": "/v1",
-        "entryFile": "./src/router.ts",
-        "routesDir": "./_gen/routes",
-        "iocModule": "./src/ioc"
-    }
+  "entryFile": "./src/router.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["src/controllers/*.controller.ts"],
+  "spec": {
+      "outputDirectory": "./_gen/swagger",
+      "specVersion": 3,
+      "host": "localhost:3000"
+  },
+  "routes": {
+      "routesDir": "./_gen/routes",
+      "iocModule": "./src/ioc"
+  }
 }
