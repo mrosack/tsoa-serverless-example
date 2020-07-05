@@ -22,7 +22,12 @@ export class HttpRequest {
     }, {});
     this.method = event.httpMethod;
     this.params = event.pathParameters;
+
     this.query = event.queryStringParameters;
+    if (this.query === null) {
+      this.query = {};
+    }
+
     this.url = event.path;
   }
 
