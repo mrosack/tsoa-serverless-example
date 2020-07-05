@@ -17,12 +17,17 @@ export class HttpRequest {
     }
 
     this.headers = _.reduce(event.headers || {}, (result, value, key) => {
-      result[key.toLowerCase()] = value;
+      result[key] = value;
       return result;
     }, {});
     this.method = event.httpMethod;
     this.params = event.pathParameters;
+
     this.query = event.queryStringParameters;
+    if (this.query === null) {
+      this.query = {};
+    }
+
     this.url = event.path;
   }
 
