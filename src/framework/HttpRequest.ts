@@ -17,7 +17,7 @@ export class HttpRequest {
     }
 
     this.headers = _.reduce(event.headers || {}, (result, value, key) => {
-      result[key.toLowerCase()] = value;
+      result[key] = value;
       return result;
     }, {});
     this.method = event.httpMethod;
